@@ -5,23 +5,23 @@ int numA = Convert.ToInt32(Console.ReadLine());
 
 
 
-if (numA > 9 & numA <= 99)
-{
-    int result = numA/10 + numA%10;
-    System.Console.WriteLine(result);
-}
+// if (numA > 9 & numA <= 99)
+// {
+//     int result = numA/10 + numA%10;
+//     System.Console.WriteLine(result);
+// }
 
-if (numA > 99 & numA < 999)
-{
-    int numB = numA/100;
-    int numC = numA%100;
-    int result2 = numB + numC/10 + numC%10;
-     System.Console.WriteLine(result2);
-}
-else 
-{
+// if (numA > 99 & numA < 999)
+// {
+//     int numB = numA/100;
+//     int numC = numA%100;
+//     int result2 = numB + numC/10 + numC%10;
+//      System.Console.WriteLine(result2);
+// }
+// else 
+// {
 
-}
+// }
 
 int SumNumber(int numA)
 {
@@ -36,7 +36,7 @@ advance = numA - numA % 10;
 result3 = result3 + (numA - advance);
 numA = numA / 10;
 }
-return result;
+return result3;
 }
 
 int sumNumber = SumNumber(numA);
