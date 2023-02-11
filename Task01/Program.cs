@@ -7,30 +7,36 @@ int numA = int.Parse(Console.ReadLine());
 System.Console.Write("Enter number B:  ");
 int numB = int.Parse(Console.ReadLine());
 
+int power = numA;
 
-if (numB == 0)
+if (numB <= 0)
 {
     System.Console.WriteLine("Error");
 }
-
+else
 if (numB == 2)
 {
-     numA = numA*numA;
-     System.Console.WriteLine($"{numA}");
+    
+     int result = numA*numA;
+     System.Console.WriteLine(result);
 }
+
 else
-if (numB > 2)
+
 {
-   System.Console.WriteLine(power);  
+//    System.Console.WriteLine(power);
 }
 
-int GetPower(int num);
-int power = 0;
-
-for (int num = 1; i > 2; i++)
+ for (int i = 1; i < numB; i++)
 {
-power = numA*numA;
+    power = power * numA;
+
 }
+
+
+System.Console.WriteLine(power);
+
+
 
  
 
