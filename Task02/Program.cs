@@ -1,7 +1,8 @@
 ﻿// Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
 
 System.Console.Write("Enter number A:  ");
-int numA = int.Parse(Console.ReadLine());
+int numA = Convert.ToInt32(Console.ReadLine());
+
 
 
 if (numA > 9 & numA <= 99)
@@ -17,18 +18,26 @@ if (numA > 99 & numA < 999)
     int result2 = numB + numC/10 + numC%10;
      System.Console.WriteLine(result2);
 }
+else 
+{
 
-// else{
-// System.Console.WriteLine($"countNumbers = {countNumbers(Number)}");
-// }
+}
 
-// int countNumbers(int Num)
-// {
-//     int count = 0;
-//     for(; Num > 0; count++)
-//     {
-//         Num = Num/10;
-//     }
-//     return count;
+int SumNumber(int numA)
+{
+    
+ int counter = Convert.ToString(numA).Length;
+ int advance = 0;
+ int result3 = 0;
 
-// }
+for (int i = 0; i < counter; i++)
+{
+advance = numA - numA % 10;
+result3 = result3 + (numA - advance);
+numA = numA / 10;
+}
+return result;
+}
+
+int sumNumber = SumNumber(numA);
+Console.WriteLine(sumNumber);
