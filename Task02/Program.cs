@@ -29,11 +29,14 @@ int SumNumber(int numA)
  int counter = Convert.ToString(numA).Length;
  int advance = 0;
  int result3 = 0;
+// Добавили для отрицательных чисел
+ numA = Math.Abs(numA);   
+ 
 
 for (int i = 0; i < counter; i++)
 {
 advance = numA - numA % 10;
-result3 = result3 + (numA - advance);
+result3 = (result3) + (numA - advance);
 numA = numA / 10;
 }
 return result3;
